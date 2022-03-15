@@ -1,7 +1,3 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
 /** @category Utility */
 class EventHandler {
     /**
@@ -116,5 +112,4 @@ class EventTarget {
     }
 }
 
-exports.EventHandler = EventHandler;
-exports.EventTarget = EventTarget;
+export { EventHandler, EventTarget };
