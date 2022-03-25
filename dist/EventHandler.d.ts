@@ -1,4 +1,3 @@
-/** @category Utility */
 export declare class EventHandler<Args extends unknown[], Handler extends (...args: Args) => void = (...args: Args) => void> {
     private static _nextID;
     readonly id: string;
