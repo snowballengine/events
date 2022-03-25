@@ -1,6 +1,6 @@
 {
     "name": "@snowballengine/events",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "bundle": "dist/index.min.js",
