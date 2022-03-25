@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "ES6",
-        "lib": ["ESNext", "DOM"],
+        "lib": ["ESNext"],
         "rootDir": "src",
         "moduleResolution": "Node",
         "declaration": true,
@@ -9,6 +9,8 @@
         "removeComments": false,
         "importHelpers": true,
         "forceConsistentCasingInFileNames": true,
-        "strict": true
+        "strict": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
     }
 }
