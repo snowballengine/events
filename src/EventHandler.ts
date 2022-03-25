@@ -1,4 +1,3 @@
-/** @category Utility */
 export class EventHandler<
     Args extends unknown[],
     Handler extends (...args: Args) => void = (...args: Args) => void
@@ -15,7 +14,6 @@ export class EventHandler<
      */
     public constructor(handler: Handler, bindScope?: ThisParameterType<Handler>) {
         this.id = String(EventHandler._nextID++);
-        if (bindScope) handler = handler.bind(bindScope) as Handler;
-        this.handler = handler;
+        this.handler = bindScope ? (handler.bind(bindScope) as Handler) : handler;
     }
 }
