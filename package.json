@@ -7,7 +7,7 @@
     "types": "dist/index.d.ts",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/MatsThieme/snowballengine-events.git"
+        "url": "git+https://github.com/snowballengine/events.git"
     },
     "author": "Mats Thieme",
     "license": "MIT",
@@ -27,7 +27,7 @@
         "tslib": "^2.3.1"
     },
     "bugs": {
-        "url": "https://github.com/MatsThieme/snowballengine-events/issues"
+        "url": "https://github.com/snowballengine/events/issues"
     },
-    "homepage": "https://github.com/MatsThieme/snowballengine-events#readme"
+    "homepage": "https://github.com/snowballengine/events#readme"
 }
