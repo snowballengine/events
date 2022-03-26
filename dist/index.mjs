@@ -34,7 +34,11 @@ function listen(...eventNames) {
     };
 }
 function registerDecoratorListeners(eventTarget) {
-    for (const { eventNames, handlerFn } of eventTarget[EVENT_DATA_SYMBOL]) {
+    const eventData = eventTarget[EVENT_DATA_SYMBOL];
+    if (!eventData) {
+        return;
+    }
+    for (const { eventNames, handlerFn } of eventData) {
         const handler = new EventHandler(handlerFn, eventTarget);
         for (const eventName of eventNames) {
             eventTarget.addListener(eventName, handler);
