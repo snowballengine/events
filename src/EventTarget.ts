@@ -28,13 +28,7 @@ export class EventTarget<T extends EventType> {
         if (this._events[eventName]) {
             delete this._events[eventName]![handler.id];
 
-            let counter = 0;
-
-            for (const key in this._events) {
-                counter++;
-            }
-
-            if (counter === 0) {
+            if (Object.keys(this._events).length === 0) {
                 delete this._events[eventName];
             }
         }
