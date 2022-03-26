@@ -44,9 +44,13 @@ export function listen<
 }
 
 export function registerDecoratorListeners<T extends EventTarget<any>>(eventTarget: T) {
-    for (const { eventNames, handlerFn } of (eventTarget as DecoratedEventTarget<T>)[
-        EVENT_DATA_SYMBOL
-    ]) {
+    const eventData = (eventTarget as DecoratedEventTarget<T>)[EVENT_DATA_SYMBOL];
+
+    if (!eventData) {
+        return;
+    }
+
+    for (const { eventNames, handlerFn } of eventData) {
         const handler = new EventHandler(handlerFn, eventTarget);
 
         for (const eventName of eventNames) {
